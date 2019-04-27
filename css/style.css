@@ -1,0 +1,9 @@
+.chart-container {
+	width: 800px;
+	height: 600px;
+	border: 1px solid black;
+}
+
+#chart svg {
+	background-image: url("../images/football_pitch_actual_white_portrait_half.jpg");
+}
