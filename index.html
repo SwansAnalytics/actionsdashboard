@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="stylesheet" type="text/css" href="dc.js/web/css/dc.css"/>
+	<script type="text/javascript" src="dc.js/web/js/promise-polyfill.js"></script>
+    <script type="text/javascript" src="dc.js/web/js/fetch.umd.js"></script>
+	<script type="text/javascript" src="dc.js/web/js/d3.js"></script>
+	<script type="text/javascript" src="dc.js/web/js/crossfilter.js"></script>
+	<script type="text/javascript" src="dc.js/web/js/dc.js"></script>
+
+    <title>Grid Template for Bootstrap</title>
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
+  </head>
+  
+  <style>
+	body {
+		    font-family: Arial !important;
+		}
+  
+  .dc-select-menu {
+  
+	width: 100%;
+    height: 30px;
+    border-radius: 3px;
+}
+
+</style>
+
+  <body>
+    <div class="container-fluid">
+		<div class="row">
+			<div class='col-sm-12'>
+				<h1>Swansea City Goals Dashboard</h1>
+				<p class="lead">Created by <a href='http://www.twitter.com/SwansAnalytics' target='blank'>@SwansAnalytics</a></p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<h4>Filters</h4>
+				<div id="selectSeason" style="width:100%; margin-bottom: 20px">
+					<div>
+					  Season <a class='reset'
+						 href='javascript:selectSeason.filterAll();dc.redrawAll();'
+						 style='visibility: hidden;'>reset</a>
+					</div>
+				</div>
+				
+				<div id="selectMatch" style="width:100%; margin-bottom: 20px">
+					<div>
+					  Match <a class='reset'
+						 href='javascript:selectMatch.filterAll();dc.redrawAll();'
+						 style='visibility: hidden;'>reset</a>
+					</div>
+				</div>
+				
+				<div id="selectPlayer" style="width:100%; margin-bottom: 20px">
+					<div>
+					  Player <a class='reset'
+						 href='javascript:selectPlayer.filterAll();dc.redrawAll();'
+						 style='visibility: hidden;'>reset</a>
+					</div>
+				</div>
+				
+				<div id="selectActionType" style="width:100%; margin-bottom: 20px">
+					<div>
+					  Goal Type <a class='reset'
+						 href='javascript:selectActionType.filterAll();dc.redrawAll();'
+						 style='visibility: hidden;'>reset</a>
+					</div>
+				</div>
+			</div>
+			<div class='col-sm-9'>
+				<div class="chart-container">
+					<div id='chart'></div>
+				</div>
+			</div>
+		</div>
+      
+
+      
+
+    </div> <!-- /container -->
+
+	<script type="text/javascript" src="code.js"></script>
+
+  </body>
+</html>
