@@ -1,5 +1,6 @@
 var chart = dc.bubbleChart('#chart'),
 selectSeason = dc.selectMenu('#selectSeason'),
+selectTeamType = dc.selectMenu('#selectTeamType'),
 selectMatch = dc.selectMenu('#selectMatch'),
 selectPlayer = dc.selectMenu('#selectPlayer'),
 selectActionType = dc.selectMenu('#selectActionType');
@@ -2328,6 +2329,7 @@ var ndx                = crossfilter(data);
 var seasonDimension = ndx.dimension(function(d) { return d.Season;});
 var actionDimension = ndx.dimension(function(d) { return d.Id;});
 var matchDimension = ndx.dimension(function(d) { return d.Match;});
+var teamTypeDimension = ndx.dimension(function(d) { return d.TeamType;});
 var playerDimension = ndx.dimension(function(d) { return d.PlayerName;});
 var actionTypeDimension = ndx.dimension(function(d) { return d.GoalType;});
 
@@ -2406,6 +2408,11 @@ chart
 selectSeason
     .dimension(seasonDimension)
     .group(seasonDimension.group())
+    .controlsUseVisibility(true);
+
+selectTeamType
+    .dimension(teamTypeDimension)
+    .group(teamTypeDimension.group())
     .controlsUseVisibility(true);
 	
 selectMatch
